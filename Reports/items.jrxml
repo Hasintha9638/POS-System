@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2018-09-07T09:42:58 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="items" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7eebaa4-068b-407f-bf7a-d4c2e72a1292">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="cG9pbnRfb2Zfc2FsZS5pdGVtIEFTICwxMjcsMTM0LGY0OGQ4OTE3LThlOWYtNDBkNi05Y2NiLWYx&#xA;ZjQ4YzJjZWRmMDs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="pos"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT point_of_sale.item.id,
+	point_of_sale.item.name,
+	point_of_sale.item.buying_price,
+	point_of_sale.item.retail_price,
+	point_of_sale.item.wholesale_price,
+	point_of_sale.item.qty,
+	point_of_sale.item.expired_date
+FROM point_of_sale.item]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="buying_price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="retail_price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="wholesale_price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expired_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="d7cb9de5-f1d6-4e9a-8441-72f5e2127742"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="3eb8e1ab-7e38-4368-89db-62b6501a8c67"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial Rounded MT Bold"/>
+				</textElement>
+				<text><![CDATA[ITEM REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="d69c6691-e92e-45c5-bf2d-c1dc15dabb91"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="60" height="15" uuid="421ffab4-1fed-486d-bd34-bd12edb101f5"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="60" y="19" width="98" height="15" uuid="f7c2e658-751a-4544-8ee7-cbbbdef4fb3b"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="577ce16a-3c8f-4209-a515-e48a05041ea2"/>
+				<text><![CDATA[Buying_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="cc7296d9-6f21-4e66-97a2-30d0b77a24a5"/>
+				<text><![CDATA[Retail_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="94" height="15" uuid="13ec4013-5384-4cac-9cf5-d343a4da47d8"/>
+				<text><![CDATA[Wholesale_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="410" y="19" width="64" height="15" uuid="4a27d76e-b91c-442f-982b-f59e13261e5e"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="d528c88f-cec4-4ccb-bae3-4a23f6847840"/>
+				<text><![CDATA[Expired_date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="f367c019-9cb7-431c-8713-5a96f9b889aa"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="60" height="15" uuid="8e459de4-00d1-4d95-a274-e48143ed2a61"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="60" y="0" width="98" height="15" uuid="503effd9-9049-43f6-be22-29cbde2a7f4d"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="673f362d-cb72-471c-9778-ebaf071f0360"/>
+				<textFieldExpression><![CDATA[$F{buying_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="608694f3-b96a-4c1f-923f-1cdd71884e29"/>
+				<textFieldExpression><![CDATA[$F{retail_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="94" height="15" uuid="932410c6-eff9-4b09-b537-1aa60b7ba420"/>
+				<textFieldExpression><![CDATA[$F{wholesale_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="410" y="0" width="64" height="15" uuid="e6a055e1-1d38-4cdb-ad84-f69daca8b881"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="7f95a229-111f-4c78-b8ad-9a18441f8b18"/>
+				<textFieldExpression><![CDATA[$F{expired_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="02519f40-8679-4e40-a1f1-699bc025a206"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="6f13e17d-4b46-4ede-ab63-9d2685ec9c16"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="6857db7e-824a-4cda-b8dc-fe5c95aca145"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ef9fc35f-c45f-4ec6-a5cc-ec2020109ea7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
